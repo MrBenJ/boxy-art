@@ -1,23 +1,33 @@
+$box-size: 8px;
+
+body {
+  background-color: #000;
+}
+
 .body {
   height: 100vh;
   width: 100vw;
   position: relative;
   background-color: #000; 
   overflow: hidden;
+  transition: all 2s;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.box-wrapper {
+  position: relative;
+  height: $box-size;
+  width: $box-size;
 }
 
 .box {
+  position: absolute; 
   background-color: white;
-  height: 50px;
-  width: 50px;
-  transition: all .2s ease-in-out;
-
-  &:hover {
-    background-color: blue;
-    cursor: pointer;
-  }
-  &.expand {
-    height: 500px;
-    width: 500px;
-  }
+  height: $box-size;
+  border: 1px solid black;
+  width: $box-size;
 }
